@@ -1,5 +1,6 @@
+import 'package:city_mall/ui/auth/login.dart';
 import 'package:flutter/material.dart';
-import 'package:splashscreen/splashscreen.dart';
+
 
 class Splash extends StatefulWidget {
   @override
@@ -8,13 +9,45 @@ class Splash extends StatefulWidget {
 
 class _SplashState extends State<Splash> {
   @override
-  
+
+  void initState(){
+    super.initState();
+
+    _statusForm().then(
+      (status) {
+        if (status) {
+           _navigateToHome();
+        }
+      }
+    );
+  }
+
+  Future <bool> _statusForm() async {
+    await Future.delayed(Duration(milliseconds: 5000), () {});
+
+    return true;
+  }
+      void _navigateToHome() {
+          Navigator.of(context).pushReplacement(MaterialPageRoute(
+            builder: (BuildContext context) => Login()));
+  }
   Widget build(BuildContext context) {
-    return SplashScreen(
-      seconds: 6,
-      //navigateAfterSeconds:,
-      image: Image.asset('assets/img/city_mall.png'),
-      photoSize: 70.0,
+    return Scaffold(
+      body: Container(
+        child: Center(
+          child: Stack(
+            alignment: Alignment.center,
+            children: <Widget> [
+              Opacity(opacity: 1,
+              child: Image.asset('assets/img/city_mall.png',
+              height: 130,
+              width: 130,
+              ),
+              )
+            ]
+          ),
+        )
+      ),
     );
   }
 }
