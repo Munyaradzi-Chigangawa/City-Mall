@@ -1,3 +1,4 @@
+import 'package:city_mall/shared/theme.dart';
 import 'package:city_mall/ui/splash.dart';
 import 'package:flutter/material.dart';
 
@@ -10,9 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: lightTheme,
+      debugShowCheckedModeBanner: false,
       home: Splash(),
     );
   }
