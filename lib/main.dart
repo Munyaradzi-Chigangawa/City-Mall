@@ -1,6 +1,6 @@
-import 'package:city_mall/shared/theme.dart';
 import 'package:city_mall/ui/splash.dart';
 import 'package:flutter/material.dart';
+import 'shared/components/theme.dart';
 
 void main() {
   runApp(MyApp());
