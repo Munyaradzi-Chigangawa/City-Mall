@@ -1,6 +1,5 @@
-import 'package:city_mall/ui/auth/login.dart';
+import 'package:city_mall/ui/auth/welcome/welcome.dart';
 import 'package:flutter/material.dart';
-
 
 class Splash extends StatefulWidget {
   @override
@@ -29,7 +28,7 @@ class _SplashState extends State<Splash> {
   }
       void _navigateToHome() {
           Navigator.of(context).pushReplacement(MaterialPageRoute(
-            builder: (BuildContext context) => Login()));
+            builder: (BuildContext context) => WelcomeScreen()));
   }
   Widget build(BuildContext context) {
     return Scaffold(
