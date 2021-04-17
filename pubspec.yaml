@@ -13,6 +13,7 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   splashscreen:
+  flutter_svg: ^0.19.1
 
 dev_dependencies:
   flutter_test:
@@ -24,6 +25,8 @@ flutter:
 
   assets:
     - assets/img/city_mall.png
+    - assets/images/
+    - assets/icons/
 
   # fonts:
   #   - family: Schyler
